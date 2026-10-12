@@ -1,0 +1,1 @@
+export default function PageHead({eyebrow='C.A.C',title,description}){return <section className="page-head"><div className="container"><div className="eyebrow">{eyebrow}</div><h1>{title}</h1>{description&&<p>{description}</p>}</div></section>}

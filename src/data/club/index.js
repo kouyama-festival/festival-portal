@@ -1,0 +1,1 @@
+export const club={name:'C.A.C',fullName:'Computer & Art Club',lead:'コンピュータとクリエイティブを組み合わせ、ゲーム・Web・映像などの作品制作に取り組む部活動です。',members:'ゲーム・Web・デザインなどに興味を持つ学生が活動しています。',activities:['ゲーム制作','Webアプリ開発','コンテスト参加','映像・デザイン制作'],history:'企画から設計、開発、公開までをチームで経験することを大切にしています。'};

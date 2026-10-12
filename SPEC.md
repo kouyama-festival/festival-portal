@@ -1,0 +1,14 @@
+# SPEC
+- トップページ
+- ゲーム（制作物）
+  - 部活概要
+  - 活動風景
+  - 制作物一覧
+  - タグ検索
+  - レビュー・掲示板
+- コンテスト作品
+  - 作品詳細
+  - 受賞作品
+- React / Vite / JavaScript / CSS
+- Firebase Firestore（設定時）
+- GitHub Pages 用の相対 base 設定

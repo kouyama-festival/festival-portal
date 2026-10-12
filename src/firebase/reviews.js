@@ -1,0 +1,4 @@
+import {collection,addDoc,getDocs,query,orderBy} from 'firebase/firestore'; import {app,firebaseEnabled} from './config'; import {getFirestore} from 'firebase/firestore';
+const key=id=>`cac-reviews-${id}`;
+export async function getReviews(gameId){if(firebaseEnabled){try{const db=getFirestore(app);const q=query(collection(db,'reviews'),orderBy('createdAt','desc'));const s=await getDocs(q);return s.docs.map(d=>({id:d.id,...d.data()})).filter(x=>x.gameId===gameId)}catch{return []}}try{return JSON.parse(localStorage.getItem(key(gameId))||'[]')}catch{return []}}
+export async function saveReview(gameId,data){const review={gameId,...data};if(firebaseEnabled){const db=getFirestore(app);await addDoc(collection(db,'reviews'),review);return}const list=await getReviews(gameId);localStorage.setItem(key(gameId),JSON.stringify([{...review,id:crypto.randomUUID?.()||String(Date.now())},...list]))}

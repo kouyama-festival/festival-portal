@@ -1,0 +1,1 @@
+import {useEffect,useState} from 'react'; import {getReviews} from '../firebase/reviews'; export default function useReviews(gameId){const [reviews,setReviews]=useState([]);useEffect(()=>{getReviews(gameId).then(setReviews)},[gameId]);return reviews}

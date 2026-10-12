@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom'; import Thumb from './Thumb';
+export default function WorkCard({item,type='game'}){const path=type==='game'?`/games/${item.id}`:`/contest/${item.id}`;return <Link className="work-card" to={path}><Thumb src={item.image} alt=""/><div className="work-body"><h3>{item.title}</h3><p>{item.summary}</p><div className="tags">{item.tags?.slice(0,3).map(t=><span key={t}>{t}</span>)}</div></div></Link>}

@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom';
+export default function Footer(){return <footer><div className="footer-inner"><div><strong>C.A.C</strong><p>神山祭ポータルサイト</p><p className="muted">学生による制作物・活動を紹介します。</p></div><div className="footer-links"><Link to="/club">部活概要</Link><Link to="/activities">活動風景</Link><Link to="/games">ゲーム</Link><Link to="/contest">コンテスト</Link><Link to="/awards">受賞作品</Link></div><div className="footer-copy">© 2026 C.A.C</div></div></footer>}

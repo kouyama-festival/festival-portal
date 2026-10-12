@@ -1,0 +1,1 @@
+import {Link} from 'react-router-dom'; export default function NotFound(){return <div className="container notfound"><span className="eyebrow">404</span><h1>ページが見つかりません</h1><p>URLをご確認ください。</p><Link className="btn primary" to="/">トップへ戻る</Link></div>}

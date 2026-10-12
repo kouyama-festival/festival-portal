@@ -1,0 +1,1 @@
+import {useMemo,useState} from 'react'; export default function useFilter(items){const [tag,setTag]=useState('すべて');const filtered=useMemo(()=>tag==='すべて'?items:items.filter(x=>x.tags?.includes(tag)),[items,tag]);return {tag,setTag,filtered}}
