@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // レビュー・掲示板（src/firebase/reviews.js）
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['gameId', 'userName', 'rating', 'comment', 'createdAt'])
+        && request.resource.data.gameId is string
+        && request.resource.data.userName is string && request.resource.data.userName.size() <= 30
+        && request.resource.data.rating is int && request.resource.data.rating >= 1 && request.resource.data.rating <= 5
+        && request.resource.data.comment is string && request.resource.data.comment.size() > 0 && request.resource.data.comment.size() <= 1000
+        && request.resource.data.createdAt is int;
+      allow update, delete: if false;
+    }
+
+    // ゲーム詳細ページのリンククリック記録（src/firebase/gameLinkClicks.js）
+    // 公開サイトからは追加のみ許可し、読み取り・変更・削除はできない。集計は Firebase Console か管理者権限のスクリプトで行う。
+    match /gameLinkClicks/{clickId} {
+      allow create: if request.resource.data.keys().hasOnly(['gameId', 'gameTitle', 'linkLabel', 'url', 'clickedAt'])
+        && request.resource.data.keys().hasAll(['gameId', 'linkLabel', 'url', 'clickedAt'])
+        && request.resource.data.gameId is string && request.resource.data.gameId.matches('game-[0-9]+')
+        && (!('gameTitle' in request.resource.data) || (request.resource.data.gameTitle is string && request.resource.data.gameTitle.size() <= 100))
+        && request.resource.data.linkLabel is string && request.resource.data.linkLabel.size() > 0 && request.resource.data.linkLabel.size() <= 50
+        && request.resource.data.url is string && request.resource.data.url.matches('https?://.+') && request.resource.data.url.size() <= 2048
+        && request.resource.data.clickedAt == request.time;
+      allow read, update, delete: if false;
+    }
+
+    // 上記以外のコレクションへのアクセスはすべて拒否する（ルール未定義のパスは既定で拒否）。
+  }
+}

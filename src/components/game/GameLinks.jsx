@@ -1,0 +1,2 @@
+import {recordGameLinkClick} from '../../firebase/gameLinkClicks';
+export default function GameLinks({game}){if(!game.links?.length)return null;return <div className="game-links">{game.links.map(l=><a key={l.url} className="btn" href={l.url} target="_blank" rel="noopener noreferrer" onClick={()=>{recordGameLinkClick({gameId:game.id,gameTitle:game.title,linkLabel:l.label,url:l.url})}}>{l.label} ↗</a>)}</div>}
