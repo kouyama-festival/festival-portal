@@ -1,9 +1,9 @@
 export const games=[
-{id:'game-01',title:'星降るキャンパス',club:'C.A.C Game Lab',tags:['アクション','Unity','2D'],summary:'学園を舞台に、夜のキャンパスを探索する2Dアクションゲーム。',description:'プレイヤーは不思議な星のかけらを集めながら、キャンパスに隠された物語を解き明かします。短時間でも遊べるステージ構成と、何度も挑戦したくなるスコアシステムを目指して制作しました。',year:2026,image:'/images/game-01.svg'},
-{id:'game-02',title:'神山ランナー',club:'C.A.C Game Lab',tags:['アクション','JavaScript','ブラウザ'],summary:'神山祭の会場を駆け抜けるタイムアタックゲーム。',description:'会場をモチーフにしたコースを走り、アイテムを集めながら最速タイムを狙います。',year:2026,image:'/images/game-02.svg'},
-{id:'game-03',title:'KAMIYAMA QUEST',club:'C.A.C Game Lab',tags:['RPG','Unity','3D'],summary:'仲間と協力して祭の謎を解く小さなRPG。',description:'複数のエリアを巡り、登場人物との会話や探索を楽しむミニRPGです。',year:2025,image:'/images/game-03.svg'},
-{id:'game-04',title:'ピクセル・フェス',club:'C.A.C Game Lab',tags:['パズル','2D','ドット絵'],summary:'色と形をそろえてスコアを競うパズルゲーム。',description:'シンプルなルールとテンポのよい操作感を重視した作品です。',year:2025,image:'/images/game-04.svg'},
-{id:'game-05',title:'迷子のロボット',club:'C.A.C Game Lab',tags:['アドベンチャー','Unity'],summary:'小さなロボットの旅を描いた探索アドベンチャー。',description:'ステージを探索し、ギミックを解きながらロボットの目的地を目指します。',year:2024,image:'/images/game-05.svg'},
-{id:'game-06',title:'Color Beat',club:'C.A.C Game Lab',tags:['音楽','ブラウザ','リズム'],summary:'音楽に合わせてボタンを叩くリズムゲーム。',description:'ブラウザだけで遊べるリズムゲームとして制作しました。',year:2024,image:'/images/game-06.svg'}
+{id:'game-01',title:'星降るキャンパス',club:'C.A.C Game Lab',tags:['アクション','Unity','2D'],summary:'学園を舞台に、夜のキャンパスを探索する2Dアクションゲーム。',description:'プレイヤーは不思議な星のかけらを集めながら、キャンパスに隠された物語を解き明かします。短時間でも遊べるステージ構成と、何度も挑戦したくなるスコアシステムを目指して制作しました。',year:2026,image:'/images/game-01.svg',links:[{label:'プレイページ',url:'https://example.com/games/game-01/play'},{label:'紹介動画',url:'https://example.com/games/game-01/video'}]},
+{id:'game-02',title:'神山ランナー',club:'C.A.C Game Lab',tags:['アクション','JavaScript','ブラウザ'],summary:'神山祭の会場を駆け抜けるタイムアタックゲーム。',description:'会場をモチーフにしたコースを走り、アイテムを集めながら最速タイムを狙います。',year:2026,image:'/images/game-02.svg',links:[{label:'プレイページ',url:'https://example.com/games/game-02/play'}]},
+{id:'game-03',title:'KAMIYAMA QUEST',club:'C.A.C Game Lab',tags:['RPG','Unity','3D'],summary:'仲間と協力して祭の謎を解く小さなRPG。',description:'複数のエリアを巡り、登場人物との会話や探索を楽しむミニRPGです。',year:2025,image:'/images/game-03.svg',links:[{label:'ダウンロード',url:'https://example.com/games/game-03/download'},{label:'紹介動画',url:'https://example.com/games/game-03/video'}]},
+{id:'game-04',title:'ピクセル・フェス',club:'C.A.C Game Lab',tags:['パズル','2D','ドット絵'],summary:'色と形をそろえてスコアを競うパズルゲーム。',description:'シンプルなルールとテンポのよい操作感を重視した作品です。',year:2025,image:'/images/game-04.svg',links:[{label:'プレイページ',url:'https://example.com/games/game-04/play'}]},
+{id:'game-05',title:'迷子のロボット',club:'C.A.C Game Lab',tags:['アドベンチャー','Unity'],summary:'小さなロボットの旅を描いた探索アドベンチャー。',description:'ステージを探索し、ギミックを解きながらロボットの目的地を目指します。',year:2024,image:'/images/game-05.svg',links:[{label:'ダウンロード',url:'https://example.com/games/game-05/download'}]},
+{id:'game-06',title:'Color Beat',club:'C.A.C Game Lab',tags:['音楽','ブラウザ','リズム'],summary:'音楽に合わせてボタンを叩くリズムゲーム。',description:'ブラウザだけで遊べるリズムゲームとして制作しました。',year:2024,image:'/images/game-06.svg',links:[{label:'プレイページ',url:'https://example.com/games/game-06/play'}]}
 ];
 export const getGame=id=>games.find(g=>g.id===id);
