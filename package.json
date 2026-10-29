@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "npm run build && gh-pages -d dist",
-    "clicks": "node --env-file=.env scripts/count-game-link-clicks.mjs"
+    "clicks": "node scripts/count-game-link-clicks.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",

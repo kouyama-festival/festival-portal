@@ -43,7 +43,7 @@ import {recordGameLinkClick} from '../firebase/gameLinkClicks';
 recordGameLinkClick({gameId:'game-01',gameTitle:'星降るキャンパス',linkLabel:'プレイページ',url:'https://example.com/games/game-01/play'});
 ```
 
-ゲーム詳細ページ以外では、この関数を呼ばないでください。
+ゲーム詳細ページ以外では、この関数を呼ばないでください。通常クリックと中クリックは記録されますが、右クリックメニューの「新しいタブで開く」はブラウザの仕様上検知できないため記録されません。
 
 ### 集計の確認
 - **Firebase Console:** Firestore Database → `gameLinkClicks` で 1 件ずつの記録を確認できます。
