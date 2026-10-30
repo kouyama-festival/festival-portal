@@ -1,3 +1,10 @@
-import PageHead from '../components/common/PageHead'; import SubNav from '../components/common/SubNav';
-const items=['企画会議','チーム開発','デバッグ・改善','展示準備','神山祭での作品展示','コンテスト発表'];
-export default function Activities(){return <><PageHead title="活動風景" description="企画から展示まで、C.A.Cの活動を紹介します。"/><div className="container"><SubNav/><div className="activity-grid">{items.map((x,i)=><article key={x}><div className="activity-image"><span>PHOTO {String(i+1).padStart(2,'0')}</span></div><h3>{x}</h3><p>メンバーが協力しながら制作を進めています。アイデアを出し合い、試作と改善を繰り返します。</p></article>)}</div></div></>}
+import PageHead from '../components/common/PageHead'; import SubNav from '../components/common/SubNav'; import Thumb from '../components/common/Thumb';
+const items=[
+{name:'Programing',text:'ゲームやシステムの制作',image:'/images/activities/programing.webp'},
+{name:'CG',text:'Blender, Mayaなどを使った3Dモデルの制作',image:'/images/activities/cg.webp'},
+{name:'Graphic',text:'イラスト、アニメーションなどのデザインに関わるものの制作',image:'/images/activities/graphic.webp'},
+{name:'Music',text:'BGM, 効果音やボカロなどの音楽、音源を制作',image:'/images/activities/music.webp'},
+{name:'Video',text:'MVなどの映像作品の制作',image:'/images/activities/video.webp'},
+{name:'Scenario',text:'小説やノベルゲームのシナリオの制作',image:'/images/activities/scenario.webp'}
+];
+export default function Activities(){return <><PageHead title="活動内容" description="C.A.Cの活動内容を紹介します。"/><div className="container"><SubNav/><div className="activity-grid">{items.map(x=><article key={x.name}><Thumb src={x.image}/><h3>{x.name}</h3><p>{x.text}</p></article>)}</div></div></>}
