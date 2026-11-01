@@ -1,1 +1,1 @@
-export const imageOrFallback=src=>src||'/images/placeholder.svg';
+export const imageOrFallback=src=>src||'/festival-portal/images/placeholder.svg';
