@@ -5,4 +5,5 @@
 .award-card-img{padding:0}.award-card-img>span,.award-card-img>b,.award-card-img>small{margin-left:20px;margin-right:20px}.award-card-img>span{margin-top:14px;margin-bottom:16px}
 .activity-grid h3{margin-top:14px}
 .award-card-img{padding:0}.award-card-img>span,.award-card-img>b,.award-card-img>small{margin-left:20px;margin-right:20px}.award-card-img>span{margin-top:14px;margin-bottom:16px}
-.logo{align-items:center}.logo-img{width:auto;height:30px;display:block}.hero-shape img{width:68%;height:auto;display:block}.awards-list .thumb,.award-card-img .thumb{aspect-ratio:4/3;background:var(--soft)}.awards-list .thumb img,.award-card-img .thumb img{object-fit:contain}
+.logo{align-items:center}.logo-img{height:30px;width:auto;display:block}.hero-shape img{width:68%;height:auto;display:block}
+.awards-list .thumb,.award-card-img .thumb{aspect-ratio:4/3;background:var(--soft)}.awards-list .thumb img,.award-card-img .thumb img{object-fit:contain}
